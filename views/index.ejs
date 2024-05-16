@@ -1,0 +1,28 @@
+<html>
+<head>
+        <title>Index</title>
+</head>
+<body>
+    <h4>Student Details</h4>
+    Student Id:<%=studentid%><br>
+    Student Name:<%=studentName%><br>
+    Student Mark:<%=marks%><br>
+    Result:
+    <% if(marks >=35){%>
+    Pass
+    <% }else{%>
+    Fail
+    <%}%>
+    <hr>
+    <!-- for Loop -->
+    <table border="1px">
+        <tr><th>Subject Name</th><th>Marks</th></tr>
+        <% for(var i = 0;i< subjects.length;i++){%>
+            <tr>
+                <td><%=subjects[i].subjectName%></td>
+                <td><%=subjects[i].marks%></td>
+            </tr>
+            <%}%>
+    </table>
+        </body>
+</html>
